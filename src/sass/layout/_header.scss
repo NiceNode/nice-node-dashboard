@@ -35,9 +35,9 @@ header {
 
     .logo {
       @include media-breakpoint-up(md){
-        width: 132px;
+        width: 203px;
         height: 30px;
-        background-size: 132px 30px;
+        background-size: 203px 30px;
         background-image: var(--logoMinimizedImage);
       }
     }
@@ -64,8 +64,8 @@ header {
     height: 30px;
     @include media-breakpoint-up(sm){
       background-image: var(--logoImage);
-      background-size: 152px 32px;
-      width: 152px;
+      background-size: 236px 32px;
+      width: 236px;
       height: 32px;
     }
     @include media-breakpoint-up(md){
@@ -86,7 +86,6 @@ header {
   nav {
     order: 1;
     flex-grow: 1;
-    font-size: 24px;
 
     .links {
       display:none;
@@ -102,44 +101,101 @@ header {
       align-items: center;
       padding: 0px;
       flex: none;
-  
-      .requirements {
-        a {
-          @media (hover: hover) {
-            &:hover {
-              color: var(--requirementsColor);
+
+      .filterButton {
+        position: relative;
+        border: 2px solid $white;
+        border-radius: 25px;
+        background-color: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.4s;
+        overflow: hidden;
+        width: fit-content;
+        font-size: 20px;
+        @include media-breakpoint-up(sm){
+          font-size: 18px;
+        }
+        @include media-breakpoint-up(smmd){
+          font-size: 20px;
+        }
+        @include media-breakpoint-up(md){
+          font-size: 18px;
+        }
+        @include media-breakpoint-up(mdlg){
+          font-size: 20px;
+        }
+      
+        &.buttonDropdown, a {
+          box-sizing: border-box;
+          padding: 8px 18px;
+          width: fit-content;
+          height: 100%;
+          display: inline-block;
+          text-decoration: none;
+          overflow:visible;
+          color: $white;
+          transition: all 0.4s;
+          // border-radius: 25px;
+          &.active, &:hover {
+            background-color: $white;
+            .down {
+              transition: all 0.5s;
+            }
+            &.black {
+              color: $black;
+              .down {
+                background-color: $black;
+              }
             }
           }
         }
       }
-  
-      .download {
-        a {
-          @media (hover: hover) {
+
+      .filterMenu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        width: max-content;
+        position: absolute;
+        margin-top: 20px;
+        left: 0;
+
+        &.visible {
+          display: flex;
+        }
+
+        .filterText {
+          a {
+            color: $black;
             &:hover {
-              color: var(--downloadColor);
+              color: $orange;
             }
           }
         }
       }
-  
-      .support {
-        a {
-          @media (hover: hover) {
-            &:hover {
-              color: var(--supportColor);
-            }
-          }
-        }
+
+      .filterContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
       }
-  
-      .faq {
-        a {
-          @media (hover: hover) {
-            &:hover {
-              color: var(--faqColor);
-            }
-          }
+    
+      .down {
+        width: 24px;
+        height: 24px;
+        -webkit-mask-image: url('../images/down.svg');
+        mask-image: url('../images/down.svg');
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: white;
+        margin-left:6px;
+        @include media-breakpoint-up(sm){
+          margin-left:8px;
         }
       }
   
