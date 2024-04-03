@@ -1,4 +1,19 @@
-#requirements {
+#tables {
+
+  h3 {
+    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 38px;
+    @include media-breakpoint-up(sm){
+      font-size: 48px;
+      line-height: 58px;
+    }
+    @include media-breakpoint-up(md){
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+
   margin-top: 72px;
   font-family: 'Satoshi-Medium';
   font-size: 20px;
@@ -12,38 +27,11 @@
     margin-top: 104px;
   }
 
-  .slant {
-    display: inline-block;
-    transform: rotate(-4.5deg);
-  }
-
-  .asteriskNote {
-    margin-top: 27px;
-    font-size: 16px;
-    line-height: 20px;
-    @include media-breakpoint-up(sm){
-      font-size: 20px;
-      line-height: 24px;
-    }
-  }
-
-  .asteriskContainer {
-    margin-left:8px;
-  }
-
-  .asterisk {
-    width: 16.5px;
-    height: 16px;
+  .table-section {
+    margin-bottom: 20px;
   }
 
   .table {
-    margin-top: 40px;
-    @include media-breakpoint-up(sm){
-      margin-top: 32px;
-    }
-    @include media-breakpoint-up(md){
-      margin-top: 56px;
-    }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
