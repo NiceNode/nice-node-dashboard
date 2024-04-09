@@ -29,6 +29,14 @@
         line-height: 110px;
       }
       text-align: center;
+
+      .headline-node {
+        color: var(--headlineNode);
+      }
+
+      .headline-countries {
+        color: rgba(249, 115, 32, 1);
+      }
     }
 
     .headline-secondary {

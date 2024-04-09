@@ -1,0 +1,76 @@
+#learn {
+  @include media-breakpoint-up(sm){
+    margin-top: 96px;
+  }
+  @include media-breakpoint-up(md){
+    margin-top: 120px;
+  }
+
+  .learn-container {
+    display: flex;
+    // align-items: center;
+    height: 396px;
+    padding: 64px;
+    position: relative;
+    justify-content: space-between;
+    border-radius: 64px;
+    box-sizing: border-box;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(130, 103, 239, 0.16), rgba(130, 103, 239, 0.64));
+    @include media-breakpoint-up(sm){
+      flex-direction: row;
+      background: var(--learnBanner) no-repeat right bottom, linear-gradient(to top, rgba(130, 103, 239, 0.16), rgba(130, 103, 239, 0.64));
+      background-size: 336px 198px;
+    }
+
+    @include media-breakpoint-up(smmd){
+      background-size: 672px 396px;
+    }
+
+    .image-container {
+      flex: 1;
+      width: 672px;
+      height: 198px;
+      overflow: hidden;
+      border-radius: 2em;
+      position: relative;
+      display: none;
+    
+      @include media-breakpoint-up(sm){
+        display: block;
+      }
+    
+      .image {
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        mask-image: linear-gradient(to right, transparent, black);
+      }
+    }
+
+    .content {
+    color: var(--textColor);
+    max-width: 100%;
+    text-align: center;
+    
+    @include media-breakpoint-up(sm){
+      max-width: 50%;
+      text-align: left;
+    }
+
+    h3 {
+      font-size: 48px;
+      line-height: 58px;
+      margin-bottom: 32px;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-bottom: 48px;
+    }
+  }
+  }
+}

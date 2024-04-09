@@ -52,6 +52,31 @@
     @include media-breakpoint-up(sm){
       width: 33%;
     }
+    &.client {
+      padding-left: 36px;
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      @include media-breakpoint-up(sm){
+        padding-left: 46px;
+        background-size: 30px 30px;
+      }
+    }
+    &.ethereum {
+      background-image: url('../images/ethereum.png');
+    }
+    &.farcaster {
+      background-image: url('../images/farcaster.png');
+    }
+    &.optimism {
+      background-image: url('../images/optimism.png');
+    }
+    &.arbitrum {
+      background-image: url('../images/arbitrum.png');
+    }
+    &.livepeer {
+      background-image: url('../images/livepeer.png');
+    }
+
     &.part {
       display: none;
       @include media-breakpoint-up(sm){
